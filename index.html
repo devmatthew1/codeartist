@@ -34,6 +34,8 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-151942955-1"></script>
     <script src="https://use.fontawesome.com/264ba3896d.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+   
     <link rel="stylesheet" type="text/css" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <style type="text/css">
     	*{margin:0px;padding:0px;}
@@ -116,34 +118,34 @@
 </head>
 <body>
 	<!-- This is the bottom cover  -->
-	<div class="overlay container-fluid">
+	<div class="overlay position-absolute container-fluid bg-warning text-dark" style="top: 0%;z-index: 1;">
 		<div class="row">
 			<div class="col-md-12 d-flex vh-100 justify-content-center align-items-center">
 				<div id="surelay-quote" class="text-center">
-					<h3>Surelay</h3>
-					<p>Give me time and i'll give magic</p>
+					<h3 style="font-size: 100px;">Surelay</h3> 
+					<p  style="font-size: 20px;">Give me time and i'll give magic</p>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="main-wrapper vh-100 position-absolute" style="top: 0;left: 0px;">
+	<div class="main-wrapper vh-100 ">
 		<div class="container-fluid" style=" width:calc(100% - 80px);position: absolute;left: 0px;top: 0px;">
 			<div class="row">
 				
 							<div class="surelay-logo col-md-3 bg-warning text-dark">
-								<div class=" d-flex flex-column position-absolute bg-white text-center justify-content-center align-items-center" style="left: -15px;padding: 35% 20%;">
+								<div class="logo-box d-flex flex-column position-absolute bg-white text-center justify-content-center align-items-center" style="left: -15px;padding: 35% 20%;top: 0px;">
 									<h1 style="">FADARE</h1>
 									<h1 style="">SHOLA</h1>
 								</div>
 							</div>
 							<div class="surelay-card col-md-9 vh-100 d-flex justify-content-left align-items-center" style="background-color: #f7f8fe;" >
-									<div class="  " style="">
+									
 									  <div class="row no-gutters">
 									    <div class="surelay-photo col-md-5 py-3">
 									      <img src="images/34446255.jpg" class="card-img rounded-circle" alt="..." style="max-height: 300px;">
 									    </div>
-									    <div class="col-md-7 d-flex justify-content-left align-items-center">
+									    <div class="surelay-details col-md-7 d-flex justify-content-left align-items-center">
 									      <div class="card-body">
 									        <h5 class="card-title">Hi i'm shola</h5>
 									        <p class="card-text">Frontend developer passionate about devops engineering and great user experience delivery, i'm currently working on a traffic management solution, I love JS.</p>
@@ -163,13 +165,15 @@
 									        			<p><i class="fa fa-twitter mr-1" aria-hidden="true"></i><a href="https://twitter.com/Surestpanther" style="text-decoration: none;color: #000;">Surestpanther</a></p>
 									        			<p><i class="fa fa-map-marker  mr-1" aria-hidden="true"></i>Lagos,Nigeria</p>
 									        		</div>
-									        		<a target="_blank" class="btn btn-primary btn-sm mx-3" href=""><i class="fa fa-download" aria-hidden="true"></i> Download My Resume</a>
+									        		<a target="_blank" class="surelay-resume btn btn-sm mx-3" href="" style="background-color: #0c3056;border-color:#0c3056;color: #fff;">
+									        			<i class="fa fa-download" aria-hidden="true"></i> Download My Resume
+									        		</a>
 									        	</div>
 									        </div>
 									      </div>
 									    </div>
 									  </div>
-									</div>
+									
 			 						<div class="circle1" style="width: 10px;height: 10px;border-radius: 50%;background-color: red;position: absolute;right: 2%;">	
 			 						</div>
 			 						<div class="circle2" style="width: 10px;height: 10px;border-radius: 50%;background-color: blue;position: absolute;left: 2%;top: 20%;">	
@@ -207,5 +211,33 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
     <script src="bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js"></script>
+     <script type="text/javascript">
+     	TweenMax.to(".overlay", 2, {
+	      delay: 2,
+	      top: "-100%",
+	      ease: Expo.easeInOut
+	    })
+
+     	 TweenMax.from(".logo-box", 1, {
+	      delay: 4,
+	      opacity: 0,
+	      x: -100,
+	      ease: Expo.easeInOut
+	    })
+
+     	 TweenMax.from(".surelay-details", 1, {
+	      delay: 4,
+	      opacity: 0,
+	      y: 100,
+	      ease: Expo.easeInOut
+	    })
+
+	 	  TweenMax.from(".surelay-resume", 1, {
+	      delay: 5,
+	      opacity: 0,
+	      x: 100,
+	      ease: Expo.easeInOut
+	    })
+    </script>
 </body>
 </html>
