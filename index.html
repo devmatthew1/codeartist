@@ -39,6 +39,60 @@
     	*{margin:0px;padding:0px;}
     	body{ font-family: 'agency fb';}
     	.main-wrapper{width: 100%;padding: 0px;margin: 0px;}
+    	.circle1{
+    		animation: bounce-one 5s ease-in 1s infinite alternate;
+    	}
+    	.circle2{
+    		animation: bounce-two 5s ease-in 1s infinite alternate;
+    	}
+    	.circle3{
+    		animation: bounce-three 5s ease-in 1s infinite alternate;
+    	}
+    	.circle4{
+    		animation: bounce-four 5s ease-in 1s infinite alternate;
+    	}
+    	.circle5{
+    		animation: bounce-five 5s ease-in 1s infinite alternate;
+    	}
+    	@keyframes bounce-one {
+		  0%   {right: 2%;}
+		  25%  {right: 40%;  bottom: 20%;}
+		  50%  {left: 2%;top: 20%;}
+		  75%  {top: 5%;right: 20%;}
+		  100% {right: 40%;  bottom: 20%;}
+		}
+
+		@keyframes bounce-two {
+		  0%   {left: 2%;top: 20%;}
+		  25%  {top: 5%;right: 20%;}
+		  50%  {bottom: 1%;left: 20%;}
+		  75%  {right: 2%;}
+		  100% {right: 40%;  bottom: 20%;}
+		}
+
+		@keyframes bounce-three {
+		  0%   {right: 40%;  bottom: 20%;}
+		  25%  { bottom: 1%;left: 20%;}
+		  50%  {left: 2%;}
+		  75%  {left: 2%;top: 20%;}
+		  100% {top: 5%;right: 20%;}
+		}
+
+		@keyframes bounce-four {
+		  0%   {top: 5%;right: 20%;}
+		  25%  {right: 40%;  bottom: 20%;}
+		  50%  {bottom: 1%;left: 20%;}
+		  75%  {left: 2%;top: 20%;}
+		  100% {right: 2%;}
+		}
+
+		@keyframes bounce-five {
+		  0%   { bottom: 1%;left: 20%;}
+		  25%  {right: 2%;}
+		  50%  {left: 2%;top: 20%;}
+		  75%  {top: 5%;right: 20%;}
+		  100% {right: 40%;  bottom: 20%;}
+		}
     	@media only screen and (max-width:766px){
     		.surelay-logo{display: none;}
     		.surelay-photo{
@@ -116,15 +170,15 @@
 									    </div>
 									  </div>
 									</div>
-			 						<div class="circles" style="width: 10px;height: 10px;border-radius: 50%;background-color: red;position: absolute;right: 2%;">	
+			 						<div class="circle1" style="width: 10px;height: 10px;border-radius: 50%;background-color: red;position: absolute;right: 2%;">	
 			 						</div>
-			 						<div class="circles" style="width: 10px;height: 10px;border-radius: 50%;background-color: blue;position: absolute;left: 2%;top: 20%;">	
+			 						<div class="circle2" style="width: 10px;height: 10px;border-radius: 50%;background-color: blue;position: absolute;left: 2%;top: 20%;">	
 			 						</div>
-			 						<div class="circles" style="width: 20px;height: 20px;border-radius: 50%;background-color:#ffc107;position: absolute; right: 40%;  bottom: 20%">	
+			 						<div class="circle3" style="width: 20px;height: 20px;border-radius: 50%;background-color:#ffc107;position: absolute; right: 40%;  bottom: 20%;">	
 			 						</div>
-			 						<div class="circles" style="width: 15px;height: 15px;border-radius: 50%;background-color: green;position: absolute; top: 5%;right: 20%;">	
+			 						<div class="circle4" style="width: 15px;height: 15px;border-radius: 50%;background-color: green;position: absolute; top: 5%;right: 20%;">	
 			 						</div>
-			 						<div class="circles" style="width: 15px;height: 15px;border-radius: 50%;background-color: green;position: absolute; bottom: 1%;left: 20%;">	
+			 						<div class="circle5" style="width: 15px;height: 15px;border-radius: 50%;background-color: green;position: absolute; bottom: 1%;left: 20%;">	
 			 						</div>
 
 							</div>
